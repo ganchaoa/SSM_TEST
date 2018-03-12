@@ -22,7 +22,7 @@
      <!-- 处理器映射器HandlerMapping -->  
         <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>  
           
-        <!-- 处理器设配器HandlerAdapter -->  
+        <!-- 处理器适配器HandlerAdapter -->  
         <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">  
             <property name="messageConverters">  
                 <list>  
@@ -50,9 +50,7 @@
         <!-- 后缀 -->
         <property name="suffix" value=".jsp" />
     </bean>
-    
-    <!-- 在实际开发中通常都需配置 mvc:annotation-driven标签,这个标签是开启注解 -->  
-        <mvc:annotation-driven></mvc:annotation-driven>  
+      
         <!-- 拦截器 -->  
         <mvc:interceptors>  
             <!-- 多个拦截器，顺序执行 -->  
